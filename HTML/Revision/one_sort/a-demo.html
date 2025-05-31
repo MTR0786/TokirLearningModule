@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless News Ticker</title>
+    <style>
+        #news {
+            width: 100%;
+            height: 50px;
+            background-color: #14d44bb2;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            width: max-content;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        .ticker-item {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding-right: 50px; /* gap between repeated texts */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="news">
+        <div class="ticker-wrapper">
+            <div class="ticker-item">
+                Admission open for 2025-26 now. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum exercitationem harum repellat, aut excepturi consequuntur, optio inventore accusamus dolor impedit non tempora architecto libero. Neque impedit facilis ratione.
+            </div>
+            <div class="ticker-item">
+                Admission open for 2025-26 now. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum exercitationem harum repellat, aut excepturi consequuntur, optio inventore accusamus dolor impedit non tempora architecto libero. Neque impedit facilis ratione.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

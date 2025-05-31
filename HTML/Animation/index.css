@@ -1,0 +1,42 @@
+.box{
+    /* transform:  translate(200px,200px) scale(3) ; */
+    /* transform: rotatex(180deg); */
+    background-color:red;
+    transition-property:transform, background;
+    column-fill: blue;
+    /* transition: all 5s all ease-in; */
+    transition-duration: 1s;
+    /* transition-delay: 1s; */
+
+}
+.box:hover{
+    background-color: aqua;
+    transform:  scale(2)translate(300px,200px) ;
+    transform:rotate(180deg);
+}
+.flex{
+    display: flex;
+}
+.spinner{
+    border:8px solid green;
+    border-top:8px solid red;
+    border-radius: 50%;
+    width: 100px;
+    height:100px;
+    animation:2s linear 0s infinite spinner;
+    /* animation:1s ease-in-out 0s infinite spinner; */
+
+}
+.spinner:hover{
+    transform: rotate(360deg);
+
+}
+@keyframes spinner{
+     0%{transform:rotate(0deg);}
+     50%{ transform:rotate(360deg);}
+     100%{ transform: rotate(720deg);}
+
+     /* from{transform:rotate(0deg);}
+     to{ transform:rotate(360deg);}
+     100%{ transform: rotate(720deg);} */
+}

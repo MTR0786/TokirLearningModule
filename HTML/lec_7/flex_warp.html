@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_properties</title>
+</head>
+<style>
+#parant{
+    display: flex;
+    
+    /* flex-wrap: wrap; */
+    /* flex-wrap: nowrap,wrap, wrap-reverse; */
+
+    /* justify-content:center; */
+    /* justify-content:flex-start,space-between,end,flex-end,space-around,space-evenly; */
+
+    align-items:end;        
+}
+#parant>div {
+    width: 200px;
+    height:200px;
+    font-size: 50px; 
+}
+#parant>div:nth-child(even){
+    background-color:green;
+}
+#parant>div:nth-child(odd){
+    background-color: red;
+}
+
+</style>
+<body>
+    <div id="parant">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+       
+
+    </div>
+</body>
+
+</html>

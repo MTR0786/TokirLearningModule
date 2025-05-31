@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paractice</title>
+<style>
+    #div1{
+        background-color:white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 20px;
+        width:36%;
+        border-radius: 16px;
+    }
+    #form{
+        display: flex;
+        flex-direction: column;
+        padding:10px;
+        margin:10px        
+}
+    #form label{
+        margin: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #form input{
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+    /* #form input:hover{
+        background-color: aqua;
+    } */
+    #form button{
+        margin: 5px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+#btn{background-color: aqua;
+       border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+}
+ #btn:hover{
+        background-color: red;
+         }
+</style>
+</head>
+<body>
+    <div id="div1">
+        <form action="">
+            <fieldset id="form">
+                <legend>Inquiry form</legend>
+                <label for="Name">Name</label>
+                <input type="text" id ="Name" input="Name" placeholder="Enter your name"  maxlength="20"  required="">
+                <label for="Number" id="Number" > Mobile Number</label>
+                <input type="tel" input="Number" id="Number" minlength="10" maxlength="10" placeholder="Enter your number" required="">
+                <label for="email">Email Id</label>
+                <input type="email" id="email" input="Email" placeholder="Enter your email" required="">
+                <label for="address">Address</label>
+                <input type="text-area" id="address" input="Address" placeholder="Enter your address" required="">
+                <label for="country">Country</label>
+                <select name="country" id="country" name="country" required="" padding="10px">
+                        <option value="none">--Please choose an option--</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BV">Bouvet Island</option>
+                        <option value="BR">Brazil</option>
+                        <option value="IO">British Indian Ocean Territory</option>
+                        <option value="BN">Brunei Darussalam</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="CV">Cabo Verde</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CX">Christmas Island</option>
+                        <option value="CC">Cocos (Keeling) Islands</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CD">Congo, Democratic Republic of the</option>
+                        <option value="CG">Congo, Republic of the</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CW">Curaçao</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="SZ">Eswatini</option>
+                </select>
+                <div>
+                    <label for="Gender">Gender</label>
+                    <input type="radio" id="Gender" name="Gender" checked="">Male
+                    <input type="radio" id="Gender" name="Gender">Female
+                    <input type="radio" id="Gender" name="Gender">Other
+                </div>
+                <div>
+                    <label for="Hobbies">Hobbies</label>
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Reading
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Travelling
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Cooking
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Sports
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Music
+                    <input type="checkbox" id="Hobbies" name="Hobbies">Dance
+                    <input type="checkbox" id="Hobbies" name="Hobbies" checked="">Other
+                </div>
+                <label for="image">Image(photo)</label>
+                <input type="file" id="image" name="image" accept="image/*" required="">
+                <label for="resume">Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required="">
+                <label for="favcolor">Choose your favorite color:</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                <label for="Date-of-Birth" name="Date-of-Birth">Date-of-Birth </label>
+                <input type="date" id="Date-of-Birth" name="Date-of-Birth" required="">
+                <label for="time" name="time">Time</label>
+                <input type="time" id="time" name="time" placeholder="Enter your birth time" required="">
+                <label for="month" type="month">Month</label>
+                <input type="month" id="month" name="month" placeholder="Enter your birth month" required="">
+                <label for="week" type="week"id="weak" name="weak" placeholder="Enter your birth week">Week</label>
+                <input type="week" id="week" name="week" required="">
+                <label for="Expreince">Expreince</label>
+                <input type="range" id="Expreince" name="Expreince" min="0" max="10" required="" value="2">
+                <script>
+                    function validatePassword() {
+                      var pw1 = document.getElementById("password").value;
+                      var pw2 = document.getElementById("confirm_password").value;
+                      if (pw1 !== pw2) {
+                        alert("Passwords do not match!");
+                        return false; // prevent form submission
+                      }
+                      return true; // allow submission
+                    }
+                  </script>
+                <label for="password" name="password">Password</label>
+                <input type="password" id="password" name="password" required=""> 
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required="">
+                <button type="submit" id="btn">Submit</button>
+                <button type="reset" id="btn">Reset</button>
+                <button type="cancel" id="btn">Cancel</button>
+
+            </fieldset>
+
+         </form>
+        
+    </div>
+    
+</body>
+</html>

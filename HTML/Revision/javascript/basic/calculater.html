@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculater</title>
+</head>
+<style>
+    .main{
+        width: 500px;
+        height: 150px;
+        box-shadow: 1px 1px 1px 1px rgba(194, 212, 224, 0.5);
+        margin: 20px;
+        padding: 10px;
+    }
+</style>
+<body>
+<div class="main">
+    <input type="number"  id="num1" name="num1">
+    <select name="ope" id="ope">
+        <option value="+" id="op1">+</option>
+        <option value="-" id="op2">-</option>
+        <option value="*" id="op3">x</option>
+        <option value="/" id="op4">/</option>
+    </select>
+    <input type="number" id="num2" name="num2">
+    <br>
+    <button onclick="cal()">Calculate</button>
+    <input type="number" id="res" name="res" readonly="">
+</div>
+</body>
+<script type="text/javascript">
+    function cal(){
+        var num1= document.getElementById("num1").value;
+        var num2= document.getElementById("num2").value;
+        var op= document.getElementById("ope").value;
+        if(op=='+') {
+            var res = parseInt(num1)+parseInt(num2)
+        }
+        if(op=='-'){
+            var res = parseInt(num1)-parseInt(num2)
+        }
+        if(op=='*'){
+            var res = parseInt(num1)*parseInt(num2)
+        }
+        if(op=='/'){
+            var res = parseInt(num1)/parseInt(num2)
+        }
+        document.getElementById("res").value=res;
+    }
+    
+
+    
+</script>
+</html>

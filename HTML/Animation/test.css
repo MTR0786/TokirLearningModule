@@ -1,0 +1,130 @@
+body {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    background: black; /* Space background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 204, 0, 1) 0%, rgba(255, 130, 0, 0.7) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    box-shadow: 0 0 50px 20px rgba(255, 204, 0, 0.6); /* Sun glow effect */
+    animation: pulsate 3s infinite alternate;
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+.mercury {
+    --movex: 80px;
+    width: 16px;
+    height: 16px;
+    background: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    transform: translate(80px);
+    animation: solarsystem 2s infinite linear;
+}
+
+.Venus {
+    --movex: 120px;
+    width: 28px;
+    height: 28px;
+    background: #ffcc00; /* Golden yellow */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 14px);
+    left: calc(50% - 14px);
+    transform: translate(120px);
+    animation: solarsystem 4s infinite linear;
+}
+
+.Earth {
+    --movex: 200px;
+    width: 40px;
+    height: 40px;
+    background: #3399ff; /* Earth blue */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    transform: translate(200px);
+    animation: solarsystem 6s infinite linear;
+
+}
+.Mars {
+    --movex: 250px;
+    width: 35px;
+    height: 35px;
+    background: #ff4500; /* Mars red */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 17.5px);
+    left: calc(50% - 17.5px);
+    transform: translate(250px);
+    animation: solarsystem 8s infinite linear;
+}
+
+.jupitor{
+    --movex: 320px;
+    width: 70px;
+    height: 70px;
+    background: #b5651d; /* Jupiter brown */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    transform: translate(320px);
+    animation: solarsystem 9s infinite linear;
+}
+
+.saturn{
+    --movex: 450px;
+    width: 50px;
+    height: 50px;
+    background: #d6a1f7; /* Light pink for Saturn */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    transform: translate(550px);
+    animation: solarsystem 10s infinite linear;
+}
+
+.Rings{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+    animation: ringsRotate 6.5s infinite linear;
+}
+
+@keyframes ringsRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes solarsystem {
+    from {
+        transform: rotate(0deg) translate(var(--movex));
+    }
+    to {
+        transform: rotate(360deg) translate(var(--movex));
+    }
+}

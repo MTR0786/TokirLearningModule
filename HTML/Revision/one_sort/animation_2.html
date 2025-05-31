@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatio_box</title>
+</head>
+<style>
+    .news{
+        width: 100%;
+        height: 50px;
+        padding: 0px;
+        margin: 0px;
+        background-color: #14d44bb2;
+        overflow: hidden;
+        position: absolute;
+    }
+    .content{
+        font-size: 20px;
+        font-weight: lighter;
+        display:flex;
+        width: max-content;
+        color:white;
+        position: absolute;
+        padding-left:100% ;
+        white-space: nowrap;
+        animation: motion 10s linear infinite ;
+    }
+    #warpper{
+        
+    }
+
+@keyframes motion {
+    0%{transform: translateX(0%);
+}
+
+    100%{transform: translateX(-50%);
+}
+}
+</style>
+<body>
+    <div class="news" id="warrper">
+        <div class="content">Admission open for 2025-26 now <sup style="color: red;">NEW</sup>.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum exercitationem harum repellat, aut excepturi consequuntur, optio inventore accusamus dolor impedit non tempora architecto libero. 
+     </div>
+     <div class="content">Admission open for 2025-26 now <sup style="color: red;">NEW</sup>.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum exercitationem harum repellat, aut excepturi consequuntur, optio inventore accusamus dolor impedit non tempora architecto libero.
+     </div>
+    </div>
+</body>
+</html>

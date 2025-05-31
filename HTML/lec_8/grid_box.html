@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_area</title>
+</head>
+<style>
+    #parant{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        /* grid-template-rows: 500px 500px; */
+        gap: 5px;
+        border: radius 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .img{
+        width: 100%;
+    }
+    @media screen and (min-width:0px) and (max-width:400px){
+        #parant{grid-template-columns: repeat(2,1fr);}
+    }
+    @media screen and (min-width:400px) and (max-width:600px){
+        #parant{ grid-template-columns: repeat(3,1fr);}
+    }
+    /* #parant > div:first-child{
+        border: 2px solid red;
+    }
+    #parant > div:nth-child(2){
+        border: 2px solid red;
+        
+        
+    }
+    #parant > div:nth-child(3){
+        border: 2px solid red;
+
+    }
+    #parant > div:nth-child(4){
+        border: 2px solid red;
+      
+    }
+    #parant > div:nth-child(5){
+        border: 2px solid red;
+      
+    }
+    #parant > div:nth-child(6){
+        border: 2px solid red; 
+    }
+    #parant > div:nth-child(7){
+        border: 2px solid red; 
+    }
+#parant > div:last-child{
+    border: 2px solid red;
+} */
+</style>
+<body>
+    <div id="parant">
+        <div>
+            <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="Vijay Shekhar Sharma">
+            <span>Vijay Shekhar Sharma</span>
+            <span>Founder & CEO</span>
+            
+        </div>
+        <div>
+            <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="Kunal Shah">
+            <span>Kunal Shah</span>
+            <span>Founder</span>
+        </div>  
+        <div>
+            <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg" alt="Amrish Rau">
+            <span>Amrish Rau</span>
+            <span>CEO</span>
+        </div>
+              
+        <div>
+            <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="Sampad Swain">
+            <span>Sampad Swain</span>
+            <span>Co-Founder & CEO</span>
+        </div>
+    <div>
+        <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="Vijay Shekhar Sharma">
+        <span>Vijay Shekhar Sharma</span>
+        <span>Founder & CEO</span>
+        
+    </div>
+    <div>
+        <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png" alt="Kunal Shah">
+        <span>Kunal Shah</span>
+        <span>Founder</span>
+    </div>  
+    <div>
+        <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg" alt="Amrish Rau">
+        <span>Amrish Rau</span>
+        <span>CEO</span>
+    </div>
+          
+    <div>
+        <img class="img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="Sampad Swain">
+        <span>Sampad Swain</span>
+        <span>Co-Founder & CEO</span>
+    </div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    
+</body>
+</html>

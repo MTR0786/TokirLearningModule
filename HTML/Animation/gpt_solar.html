@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        /* Basic body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        /* Container for the solar system */
+        .solar-system {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+        }
+
+        /* Styling the Sun */
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            transform: translate(50%, 50%);
+            box-shadow: 0 0 50px 20px yellow;
+        }
+
+        /* Base styling for planets */
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            background-color: gray;
+            animation-timing-function: ease-in-out linear;
+            box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Planet orbits (animate rotation) */
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform-origin: center center;
+            animation: rotate 10s infinite linear;
+        }
+
+        /* Animation for the orbiting effect */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Adjust each planet's position and size */
+        .planet1 {
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            animation-duration: 6s;
+            top: 150px;
+            left: 150px;
+        }
+
+        .planet2 {
+            width: 25px;
+            height: 25px;
+            background-color: blue;
+            animation-duration: 8s;
+            top:200px;
+            left: 200px;
+        }
+
+        .planet3 {
+            width: 35px;
+            height: 35px;
+            background-color: green;
+            animation-duration: 12s;
+            top: 250px;
+            left: 2500px;
+        }
+
+        .planet4 {
+            width: 45px;
+            height: 45px;
+            background-color: red;
+            animation-duration: 18s;
+            top: 350px;
+            left: 350px;
+        }
+
+        .planet5 {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            animation-duration: 25s;
+            top:30px;
+            left: 450px;
+        }
+
+        .planet6 {
+            width: 60px;
+            height: 60px;
+            background-color: lightblue;
+            animation-duration: 30s;
+            top: 600px;
+            left: 600px;
+        }
+
+        .planet7 {
+            width: 70px;
+            height: 70px;
+            background-color: pink;
+            animation-duration: 35s;
+            top: 705px;
+            left: 700px;
+        }
+
+        /* Adjusting the orbits' distance from the sun */
+        .orbit1 {
+            width: 180px;
+            height: 180px;
+            animation-duration: 6s;
+        }
+
+        .orbit2 {
+            width: 220px;
+            height: 220px;
+            animation-duration: 8s;
+        }
+
+        .orbit3 {
+            width: 270px;
+            height: 270px;
+            animation-duration: 12s;
+        }
+
+        .orbit4 {
+            width: 320px;
+            height: 320px;
+            animation-duration: 18s;
+        }
+
+        .orbit5 {
+            width: 370px;
+            height: 370px;
+            animation-duration: 25s;
+        }
+
+        .orbit6 {
+            width: 420px;
+            height: 420px;
+            animation-duration: 30s;
+        }
+
+        .orbit7 {
+            width: 470px;
+            height: 470px;
+            animation-duration: 35s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="solar-system">
+        <!-- Sun -->
+        <div class="sun"></div>
+
+        <!-- Planets with their respective orbits -->
+        <div class="orbit orbit1">
+            <div class="planet planet1"></div>
+        </div>
+
+        <div class="orbit orbit2">
+            <div class="planet planet2"></div>
+        </div>
+
+        <div class="orbit orbit3">
+            <div class="planet planet3"></div>
+        </div>
+
+        <div class="orbit orbit4">
+            <div class="planet planet4"></div>
+        </div>
+
+        <div class="orbit orbit5">
+            <div class="planet planet5"></div>
+        </div>
+
+        <div class="orbit orbit6">
+            <div class="planet planet6"></div>
+        </div>
+
+        <div class="orbit orbit7">
+            <div class="planet planet7"></div>
+        </div>
+    </div>
+
+</body>
+</html>
