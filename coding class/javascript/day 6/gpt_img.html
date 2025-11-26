@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div>
+        <h1>Slide Image Show</h1>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <br><br>
+        <div id="container"></div>
+    </div>
+
+    <script>
+        var images = [
+            "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1NTUtVw3i311Z8hKu7b1LmD7Wi-m_1WNbqg&s",
+            "https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=",
+            "https://thumbs.dreamstime.com/b/landscape-nature-mountan-alps-rainbow-76824355.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz8RlFPHHJ_HHE9H4FeKVi8GwVPhPTkzmrWA&s",
+            "https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg"
+        ];
+
+        let i = 0;
+        let interval;
+
+        function start() {
+            if(interval) return; // prevent multiple intervals
+            interval = setInterval(function () {
+                document.querySelector("#container").innerHTML = ""; // clear old image
+                let image = document.createElement("img");
+                image.src = images[i];
+                image.style.width = "400px"; // optional
+                document.querySelector("#container").append(image);
+                i++;
+                if (i >= images.length) {
+                    i = 0;
+                }
+            }, 2000);
+        }
+
+        function stop() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+</body>
+</html>

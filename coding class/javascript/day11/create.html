@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 200px;
+        margin-left: 400px;
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+    input{
+        margin: 5px 0px 10px 0px;
+
+    }
+ 
+    #submit{
+        background-color:rgb(108, 66, 233);
+        color: aliceblue;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        transition: backgroung-clour 0.3s;
+        margin-top: 10px;
+
+    }
+</style>
+<body>
+    
+    <form action="" id="createUserForm">
+        <h1 style=" text-align: center;">Create New User</h1>
+        <label for="Username">Name:</label>
+        <input type="text" id="username" name="username">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" id="submit" value="Create user">
+
+
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#createUserForm").addEventListener("submit" , createUser);
+
+    function createUser(){
+        event.preventDefault();
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#email").value;
+        let userId = Math.ceil(Math.random() * 1000 +1)
+        // console.log(username , email,userId)
+
+        let payload =JSON.stringify({
+            email: email,
+            name : username,
+        });
+    let requestOptions = {
+        method : "PUT",
+        body : payload,
+    }
+
+        fetch(`https://wbft36-default-rtdb.firebaseio.com/users/${userId}.json` , requestOptions)
+        .then((res) => (res.json()))
+        .then((data) => {
+            alert("User created successfully");
+            window.location.href ="index.html";
+        })
+        .catch((err) => (consle.log(err)))
+
+    }
+</script>

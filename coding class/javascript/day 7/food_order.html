@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function orderfood(time){
+        return new Promise((resolve , reject) => {
+            setTimeout(function() {
+            console.log("foood order placed")
+            resolve()
+        }, time);
+        }) 
+    }
+
+    function preparefood(time){
+        return new Promise ((resolve , reject) =>{
+            setTimeout(function () {
+            reject("food prepration failed")
+            console.log("food is being prepared")
+            // resolve()
+            
+        }, time);
+        })  
+    }
+
+    function deliverfood(time){
+        return new Promise((resolve , reject) => {
+             setTimeout(function () {
+            console.log("food is on the way")
+        resolve()
+        }, time);
+        })   
+    }
+
+    function enjoyfood(time){
+         return new Promise((resolve , reject) => {
+        setTimeout(function() {
+            console.log("Enjoy your food")
+        resolve()
+        }, time);
+        })
+        
+        
+    }
+
+    function ratesfood(time){
+         return new Promise((resolve , reject) => {
+        setTimeout(function() {
+            console.log("rated")
+        resolve()  
+        }, time);
+        
+        })
+        
+    }
+    function walking(time){
+         return new Promise((resolve , reject) => {
+        setTimeout(function(){
+            console.log("Now i am walking")
+            resolve()
+        }, time); 
+        })
+        
+    }
+    
+    // orderfood(2000)
+    // .then(()=> preparefood(2000))
+    // .then(() => deliverfood(5000))
+    // .then(() => enjoyfood(2000))
+    // .then(() => ratesfood(2000))
+    // .then(() => walking(3000))
+    // .catch((err) => console.log(err));
+
+async function order_food() {
+    try {
+         await orderfood(1000)
+    await preparefood(2000)
+    await deliverfood(5000)
+    await enjoyfood(1000)
+    await ratesfood(2000)
+    await walking(3000)
+    }
+    catch(err){
+        console.log(err)
+    }
+    
+}
+
+order_food()
+</script>

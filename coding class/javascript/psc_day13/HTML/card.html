@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Card</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f3f3f7;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .course-card {
+            width: 400px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        .course-header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            padding: 18px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .course-body {
+            padding: 18px;
+        }
+
+        .course-body p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .highlight-price {
+            color: #d31919;
+            font-weight: 700;
+        }
+
+        .best {
+            display: inline-block;
+            background: #ffde7b;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .course-footer {
+            border-top: 1px solid #eee;
+            margin-top: 16px;
+            padding: 12px 18px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="course-card" id="course-card">
+
+        <div class="course-header" id="title">
+            <h3>Data Structures & Algorithms</h3>
+        </div>
+
+        <div class="course-body" id="course-body">
+
+            <p><strong>Instructor:</strong> Prof. John Smith</p>
+            <p><strong>Total Lectures:</strong> 193</p>
+            <p><strong>Level:</strong> Advanced</p>
+            <p><strong class="highlight-price">Price: ₹3196</strong></p>
+            <p><strong>Total Hours:</strong> 30.9 hours</p>
+
+            <p class="best" id="best">Bestseller</p>
+
+        </div>
+
+        <div class="course-footer" id="course-footer">
+            <span class="rating" id="rating">⭐ 4.6</span>
+            <span class="reviews" id="reviews">190,981 reviews</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

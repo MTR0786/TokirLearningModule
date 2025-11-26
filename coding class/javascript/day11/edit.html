@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 200px;
+        margin-left: 400px;
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+    input{
+        margin: 5px 0px 10px 0px;
+
+    }
+ 
+    #submit{
+        background-color:rgb(108, 66, 233);
+        color: aliceblue;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        transition: backgroung-clour 0.3s;
+        margin-top: 10px;
+
+    }
+</style>
+<body>
+    
+    <form action="" id="editUserForm">
+        <h1 style="text-align: center;">Edit Details</h1>
+        <label for="Username">Name:</label>
+        <input type="text" id="username" name="username">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" id="submit" value="Edit Details">
+
+
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#editUserForm").addEventListener("submit" , editUser);
+
+    let queryString = window.location.search;
+    // console.log(queryString);
+    let params = new URLSearchParams(queryString);
+    let userId = params.get("userId");
+    // console.log(userId)
+    name = params.get("name")
+    document.querySelector("#username").vlaue = name
+    function editUser(){
+        event.preventDefault();
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#email").value;
+
+
+        let rawData =JSON.stringify({
+            email: email,
+            name : username,
+        });
+         let requestOptions = {
+        method : "PATCH",
+        body : rawData,
+        }
+        fetch(`https://wbft36-default-rtdb.firebaseio.com/users/${userId}.json`, requestOptions)  
+        .then((res) => (res.json()))
+        .then((out) => {
+            alert("Successfully Edited")
+            window.location.href = "index.html"
+        })
+        .catch((err) => (console.log(err)))
+        
+    }
+
+    
+</script>

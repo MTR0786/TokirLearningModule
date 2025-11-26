@@ -1,0 +1,64 @@
+#logo{
+    width: 100px;
+    height: 60px;
+}
+#logo:hover{
+        background-color: azure;
+}
+
+.container-fluid{
+    background-color: rgb(245, 254, 254);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#search_bar{
+    width: 20%;
+    padding-left: 100px;  
+}
+.nav-item:hover{
+    color: blue;
+    transform: scale(1.1);
+    opacity:1;
+
+}
+.nav-item{
+    padding:10px;
+    color: blueviolet;
+
+}
+
+#btn-login{
+    width: 80px;
+    height:auto;
+    border: 1px solid grey;
+    border-radius:5%;
+    margin: 30px,20px,20px,20px;
+
+    
+}
+#btn-Resistor{
+     width: 90px;
+    height: auto;
+    background-color: rgba(19, 15, 249, 0.658);
+    border: 1px solid grey;
+    border-radius:5%;
+}
+#btn-login:hover{
+    transform: scale(1.1);
+    border-radius:5%;
+    background-color: green;
+    color: red;
+}
+#btn-Resistor:hover{
+    transform: scale(1.1);
+    border-radius:5%;
+    color: rgb(205, 99, 50);
+}
+
+#btn-access{
+    display: flex;
+    margin :10px 100px 10x 20px;
+    padding: auto;
+    gap: 10px;
+}
