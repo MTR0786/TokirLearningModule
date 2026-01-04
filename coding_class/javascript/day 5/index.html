@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    
+</body>
+</html>
+<script>
+    //setItem("keyname",value)
+    localStorage.setItem("student-1",90)
+
+    localStorage.setItem("student-2",95)
+
+    localStorage.setItem("mobile",85565566555)
+
+    localStorage.setItem("name","Arif raza")
+    localStorage.setItem("isqualified",true)
+
+
+    //console loacal storage
+
+    let s1 = localStorage.getItem("student-1")
+    console.log(s1)
+
+     let name = localStorage.getItem("name")
+    console.log(name)
+
+    //delete items
+    localStorage.removeItem("mobile")
+
+</script>

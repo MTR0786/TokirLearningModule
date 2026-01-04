@@ -1,0 +1,111 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: #f3f3f7;      /* remove default browser gap */
+    margin:0px;
+}
+        
+#container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+
+#course-card {
+            width: 100%; /* fill grid column */
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+.course-header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            padding: 18px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+.course-body {
+            padding: 18px;
+        }
+
+.course-body p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+.highlight-price {
+            color: #d31919;
+            font-weight: 700;
+        }
+
+.best {
+            display: inline-block;
+            background: #ffde7b;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+.course-footer {
+            border-top: 1px solid #eee;
+            margin-top: 16px;
+            padding: 12px 18px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+        }
+
+.rating {
+            color: #f39c12;
+            font-weight: 600;
+        }
+#filterDiv{
+
+    font-weight: 500;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+   
+}
+.round-select {
+  padding: 5px 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1.5px solid #bbb;
+  background: #fafafa;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+.round-select:hover {
+  border-color: #333;
+}
+.round-select:focus {
+  border-color: #0066ff;
+}
+#enroll>button{
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: #086f59;
+    border-radius: 10px;
+    margin:10px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fafafa;
+}
+#enroll{
+    margin: 5px 5px 5px 5px;
+}
+
+

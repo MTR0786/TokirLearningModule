@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 2 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #09a10e;
+  color: rgb(241, 246, 243);
+
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ede2e2;
+  border: 2px solid black;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+</style>
+<body>
+    <h1>Tudo App</h1>
+    <form action="">
+        <input type="text" placeholder="Enter TUdo" id="tudo" value="">
+        <select name="" id="prior">
+            <option value="">select</option>
+            <option value="low">Low</option>
+            <option value="mild">Mild</option>
+            <option value="high">High</option>
+        </select>
+        <input type="submit" value="add tudo" name="" id="" />
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Task priority</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
+<script>
+document.querySelector("form").addEventListener("submit",addTudo);
+
+let tudolist = [];
+
+function addTudo(event){
+    event.preventDefault()
+    let task = document.querySelector("#tudo").value;
+    let priority = document.querySelector("#prior").value;
+    let taskobj = {taskName:task, priorityName:priority};
+    tudolist.push(taskobj);
+    displayTable(tudolist);
+    console.log(tudolist)
+    document.querySelector("form").reset()
+}
+
+function displayTable(tudolist){
+    document.querySelector("tbody").innerHTML=""
+    tudolist.map(function(el,index){
+        let trow = document.createElement("tr")
+        let td1 = document.createElement("td")
+        td1.innerText = el.taskName;
+        let td2 = document.createElement("td")
+        td2.innerText = el.priorityName;
+        let td3 = document.createElement("td")
+        td3.innerText = "Delete";
+        td3.style.cursor = "pointer"
+        td3.addEventListener("click",function(){
+            deleteTudo(index)
+        })
+
+        trow.append(td1,td2,td3)
+        document.querySelector("tbody").append(trow)
+    });
+}
+displayTable(tudolist)
+
+function deleteTudo(index){
+    console.log(index);
+    let updatedlist = tudolist.splice(index,1);
+    console.log(updatedlist);
+}
+
+</script>

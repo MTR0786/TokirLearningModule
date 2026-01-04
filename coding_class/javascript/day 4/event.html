@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sartaj</h1>
+    <h1>Ashwani</h1>
+    <h1></h1>
+    
+</body>
+</html>
+
+<script>
+//step-1:  create h1 tag   <h1></h1>
+
+let name1 = document.createElement("h1")
+let name2 = document.createElement("h2")
+let name3 = document.createElement("p")
+
+//step-2 : Added innerText <h1>Sartaj</h1>
+name1.innerText = "Arif"
+name2.innerText = "adil"
+name3.innerText = "Lorem"
+
+// step-3 : append to body tag
+document.querySelector("body").append(name3,name2,name1)
+</script>
