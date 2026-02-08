@@ -7,3 +7,14 @@
 
 //showMyMarks()
 MyData()
+
+
+
+
+** errors**
+
+1. compile time error
+2. runtime error  >> exeption
+3. Logical error
+4. Syntax error
+5. ZeroDivisionError

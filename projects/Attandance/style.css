@@ -1,0 +1,31 @@
+#dashbord{
+    width: 400px;
+    height: auto;
+    display: flex;
+    margin: 20px 10px 10px 20px;
+    padding:5px 5px 5px 10px;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(100, 226, 86);
+    border-radius: 20px;
+    color: rgb(253, 250, 254);
+}
+#details{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+
+}
+#Presnt{
+    border-radius: 3px;
+    border: none;
+    background-color: #142bfa;
+}
+#Absent{
+    border-radius: 3px;
+     border: none;
+    background-color: #ed1919;
+}
+#butns{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+}

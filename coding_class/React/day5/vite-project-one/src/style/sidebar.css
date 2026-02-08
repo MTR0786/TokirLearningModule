@@ -1,0 +1,10 @@
+.sidebar {
+  position: fixed;
+  top: 90px;            /* below navbar */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: rgb(97, 150, 243);
+  color: white;
+  padding: 20px;
+}

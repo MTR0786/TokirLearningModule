@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subject Attendance Calendar</title>
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #10adad;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .subject-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .subject-info h2 {
+      margin: 0;
+    }
+
+    .stats span {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    #calendar {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- SUBJECT DETAILS -->
+    <div class="subject-info">
+      <h2>Subject: Physics</h2>
+      <div class="stats">
+        <span>Present: 18</span>
+        <span>Absent: 4</span>
+        <span>Attendance: 82%</span>
+      </div>
+    </div>
+
+    <!-- CALENDAR -->
+    <div id="calendar"></div>
+
+  </div>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        height: 550,
+
+        events: [
+          {
+            title: 'Present',
+            start: '2026-01-02',
+            color: '#4CAF50'
+          },
+          {
+            title: 'Absent',
+            start: '2026-01-05',
+            color: '#F44336'
+          },
+          {
+            title: 'Present',
+            start: '2026-01-08',
+            color: '#4CAF50'
+          },
+          {
+            title: 'No Class',
+            start: '2026-01-12',
+            color: '#9E9E9E'
+          }
+        ]
+      });
+
+      calendar.render();
+    });
+  </script>
+
+</body>
+</html>

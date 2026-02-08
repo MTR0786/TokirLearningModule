@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Dashboard</title>
+
+  <style>
+    body{
+      background-color: rgb(16, 173, 173);
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    nav{
+      background-color: rgb(112, 234, 234);
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-left: 15px;
+      border-radius: 5px;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      
+    }
+    nav a:hover{
+        color: rgb(225, 57, 57);
+    }
+
+    .center-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 30px);
+    }
+
+    #registration{
+      width: 50%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    label{
+      margin-top: 10px;
+    }
+
+    input{
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button{
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(16, 173, 173);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover{
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+
+    <!-- <select>
+      <option disabled selected>Subjects</option>
+      <option>Math</option>
+      <option>Physics</option>
+      <option>Chemistry</option>
+      <option>Computer Science</option>
+      <option>English</option>
+    </select> -->
+  </nav>
+
+  <h1 style="text-align: center; margin:30px;">Attendance Record</h1>
+
+  <div class="center-wrapper">
+    
+    <div id="registration">
+  <h2>Student Sign Up</h2>
+
+  <form id="signupForm">
+
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Enter your full name" required>
+
+    <label>Enrollment Number</label>
+    <input type="text" id="enrollment_no" placeholder="Enter enrollment number" required>
+
+    <label>Faculty Number</label>
+    <input type="text" id="faculty_no" placeholder="Enter faculty number" required>
+
+    <label>Department</label>
+    <input type="text" id="department" placeholder="Enter department name" required>
+
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile_no" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+    <label>Email ID</label>
+    <input type="email" id="email" placeholder="Enter email address" required>
+
+    <label>Date of Birth</label>
+    <input type="date" id="date_of_birth" required>
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Create password" required>
+
+    <label>Confirm Password</label>
+    <input type="password" id="confirm_password"  placeholder="Confirm password"  oncopy="return false" onpaste="return false" required>
+
+    <button type="submit" value="signup">Sign Up</button>
+
+    <p style="margin-top:10px;">
+      Already registered?
+      <a href="login.html">Login</a>
+    </p>
+
+  </form>
+</div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+document.querySelector("#signupForm").addEventListener("submit", signup);
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+const passwordRegex =
+  /^(?=.*[a-z])(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+
+
+
+function signup(event) {
+  event.preventDefault();
+
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
+  let confirmPassword = document.querySelector("#confirm_password").value;
+  let mobile_no = document.querySelector("#mobile_no").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+  if (!passwordRegex.test(password)) {
+  alert(
+    "Password must contain at least one lowercase letter, one alphabet, and one special character"
+  );
+  return;
+}
+
+  let apikey = "AIzaSyB2yEn5IfNqDahCBbX1txS54625JIvCGPo";
+
+  let raw = JSON.stringify({
+    email: email,
+    password: password,
+    returnSecureToken: true
+  });
+
+  let requestOption = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: raw
+  };
+
+  fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apikey}`, requestOption)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if (data.error) {
+        alert(data.error.message);
+      } 
+      else {
+        alert("Signup successful 🎉");
+      }
+
+    })
+    .catch(error => console.log(error));
+
+  console.log(email, password, mobile_no,raw
+  );
+}
+</script>
