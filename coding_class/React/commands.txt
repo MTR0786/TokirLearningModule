@@ -1,0 +1,5 @@
+ctrl + click => for clinking the link
+
+react =>  npm create vite@latest
+
+for run the react app =>  npm run dev  

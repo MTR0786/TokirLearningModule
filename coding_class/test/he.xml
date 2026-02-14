@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <bookstore>
+<bookstore>
   <book category="children">
     <title>Harry Potter</title>
     <author>J K. Rowling</author>
@@ -20,6 +12,3 @@
     <price>39.95</price>
   </book>
 </bookstore>
-
-</body>
-</html>
